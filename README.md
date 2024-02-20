@@ -1,6 +1,3 @@
-# DB2u
-Discrete Bootstrapped Diamond Buffer Micro (DB2u)
+# DDB
 
-This repository contains schematic and layout files for a discrete diamond buffer. 
-
-The topology features bootstrapping.
+## Discrete Diamond Buffers
