@@ -30,7 +30,9 @@ They are cheaper, smaller and simply the way forward but assembling these PCBs b
 
 ## The Buffers
 
-I started with two basic designs. The first one is very basic and inspired by Walt Jung's articles in Electronic Design Magazine:
+I started with two basic designs. Both were designed to be used with 25x25mm heatsinks glued to the back.
+
+The first one is very basic and inspired by Walt Jung's articles in Electronic Design Magazine:
 
 https://pearl-hifi.com/06_Lit_Archive/14_Books_Tech_Papers/Jung_W/Realizing_Good_Buffers.pdf
 
@@ -41,6 +43,15 @@ As far as the hardware implementation goes, I used a 4-Layer PCB with partly exp
 
 The second version (bottom PCBs in picture) is sligthly more complex because the buffer is bootstrapped to the output.
 It also has the collectors of the driver transistors connected to the emitters of the opposite output transistors.
-Both these modifications aim to decrease distortion by introducing some form of local feedback.
+Both these modifications aim to decrease distortion by introducing local feedback, which also introduces a tendency to oscillate.
+Fixing stability issues will often cost bandwidth, which is especially critical if the buffer is to be used in a feedback loop.
+In my limited experience the more sophisticated variants tend to fall short of their promises, both in simulation and reality.
 
 ![IMG_0166](https://github.com/PWieland/DDB/assets/65927363/5900f13f-ad8e-4c53-a13a-c2e7290ddf6c)
+
+A more compact version of the bootstrapped buffer, using a 20x20x10mm heatsink.
+It also features CRDs (Current Regulator Diodes) instead of discrete JFET current sources.
+The diode can easily be substituted by a resistor, avoiding the somewhat exotic CRD.
+
+![IMG_1712](https://github.com/PWieland/DDB/assets/65927363/e94fc26d-e403-4591-9036-c352ff144fc7)
+
