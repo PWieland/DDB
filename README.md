@@ -55,3 +55,14 @@ The diode can easily be substituted by a resistor, avoiding the somewhat exotic 
 
 ![IMG_1712](https://github.com/PWieland/DDB/assets/65927363/e94fc26d-e403-4591-9036-c352ff144fc7)
 
+## Performance
+
+I designed these buffers to be used within the feedback loop of OpAmps to drive headphones with vanishingly low distortion levels.
+For basic testing of this configuration, I designed a dual channel test board with the OpAmps configured as differential amplifiers.
+To achieve the best possible performance, as little of the OpAmps loop gain as possible should be wasted throughout the audio band.
+Therefore, it is recommended to apply two pole compensation schemes instead of single-/dominant-pole compensation schemes.
+
+![IMG_1713](https://github.com/PWieland/DDB/assets/65927363/e38ad0f8-9381-40a7-a4e8-a1718934670b)
+
+
+
