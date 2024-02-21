@@ -59,10 +59,15 @@ The diode can easily be substituted by a resistor, avoiding the somewhat exotic 
 
 I designed these buffers to be used within the feedback loop of OpAmps to drive headphones with vanishingly low distortion levels.
 For basic testing of this configuration, I designed a dual channel test board with the OpAmps configured as differential amplifiers.
-To achieve the best possible performance, as little of the OpAmps loop gain as possible should be wasted throughout the audio band.
-Therefore, it is recommended to apply two pole compensation schemes instead of single-/dominant-pole compensation schemes.
+To achieve the best possible performance, as little as possible of the OpAmp's loop gain may be "wasted" throughout the audio band.
+Therefore, it is recommended to apply two-pole-compensation schemes instead of single-/dominant-pole compensation schemes.
 
 ![IMG_1713](https://github.com/PWieland/DDB/assets/65927363/e38ad0f8-9381-40a7-a4e8-a1718934670b)
+
+The "classic" diamond buffer inspired by Walt Jung combined with LME49720, driving 1kHz@2Vrms into 50Ω.
+The buffer was running fairly hot at about 10mA per transistor on most likely +/- 12V rails.
+
+![newhpa](https://github.com/PWieland/DDB/assets/65927363/272459f1-a2bf-4d2a-9d27-d979934ba07c)
 
 
 
