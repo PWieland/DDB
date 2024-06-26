@@ -26,20 +26,25 @@ Doing one at a time is challenging at the very least, doing both at the same tim
 ## Design Philosophy / My Approach
 
 In contrast to the vast majority of discrete diamond buffers out there, I exclusively use modern SMD components.
-They are cheaper, smaller and simply the way forward but assembling these PCBs by hand takes some experience.
+They are cheaper and smaller but assembling these PCBs by hand takes some experience. 
 
 ## The Buffers
 
 I started with two basic designs. Both were designed to be used with 25x25mm heatsinks glued to the back.
 
-The first one is very basic and inspired by Walt Jung's articles in Electronic Design Magazine:
+### The Walt-Jung inspired classic, with LED-based current sources and triple output pairs
 
+The first one (top PCBs in picture) is very basic and inspired by Walt Jung's articles in Electronic Design Magazine:
 https://pearl-hifi.com/06_Lit_Archive/14_Books_Tech_Papers/Jung_W/Realizing_Good_Buffers.pdf
+
+<img width="1217" alt="image" src="https://github.com/PWieland/DDB/assets/65927363/93e6639d-ad2f-421e-8aae-9243687e30ba">
 
 I chose to use identical transistors (e.g. PXT2907A/PXT2222A) for driver and output stage and employ three parallel output pairs.
 Originally I chose to run all at the same current to establish similar operating points for better thermal stability and offset.
 The high bias current in the driver stages however is somewhat wasteful and results in a buffer that is toastier than I prefer.
 As far as the hardware implementation goes, I used a 4-Layer PCB with partly exposed VCC and VEE copper pours on the bottom layer.
+
+### Bootstrap version
 
 The second version (bottom PCBs in picture) is sligthly more complex because the buffer is bootstrapped to the output.
 It also has the collectors of the driver transistors connected to the emitters of the opposite output transistors.
