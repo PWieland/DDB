@@ -41,9 +41,10 @@ https://pearl-hifi.com/06_Lit_Archive/14_Books_Tech_Papers/Jung_W/Realizing_Good
 <img width="1217" alt="image" src="https://github.com/PWieland/DDB/assets/65927363/93e6639d-ad2f-421e-8aae-9243687e30ba">
 
 I chose to use identical transistors (e.g. PXT2907A/PXT2222A) for driver and output stage and employ three parallel output pairs.
-Originally I chose to run all at the same current to establish similar operating points for better thermal stability and lower offset.
+The plan was to run all at the same current to establish similar operating points for better thermal stability and lower offset.
 The high bias current in the driver stages however is somewhat wasteful and results in a buffer that is toastier than I prefer.
 As far as the hardware implementation goes, I used a 4-Layer PCB with partly exposed VCC and VEE copper pours on the bottom layer.
+All protection circuitry was carried over from Walt Jung's design.
 
 ### Bootstrap version
 
@@ -51,7 +52,14 @@ The second version (bottom PCBs in picture) is sligthly more complex because the
 It also has the collectors of the driver transistors connected to the emitters of the opposite output transistors.
 Both these modifications aim to decrease distortion by introducing local feedback, which also introduces a tendency to oscillate.
 Fixing stability issues will often cost bandwidth, which is especially critical if the buffer is to be used in a feedback loop.
+
+<img width="950" alt="image" src="https://github.com/PWieland/DDB/assets/65927363/44faf238-c882-4aa0-ba9c-67795553b761">
+
+This implementation again features circuitry (D1/D2 and Q5/Q6) to protect from overload conditions, similar to the classic design.
+
 In my limited experience the more sophisticated variants tend to fall short of their promises, both in simulation and reality.
+
+### PCB Pictures
 
 ![IMG_0166](https://github.com/PWieland/DDB/assets/65927363/5900f13f-ad8e-4c53-a13a-c2e7290ddf6c)
 
@@ -75,7 +83,8 @@ Therefore, it is recommended to apply two-pole-compensation schemes instead of s
 The "classic" diamond buffer inspired by Walt Jung combined with LME49720, driving 1kHz@2Vrms into 50Ω.
 The buffer was running fairly hot at about 10mA per transistor on +/- 12V rails. 
 The actual load resistance is slightly lower than 50Ω, due to the fairly low impedance of the Cosmos ADC used for measurement.
-Under these conditions, the output stage is operating at the upper end of its Class A region.
+Under these conditions, the output stage is operating at the upper end of its Class A region and the harmonic distortion remains well below -120dBV.
+The THD+N is dominated by mains noise coming from the power supply, but is still well below the threshold of human hearing.
 
 ![newhpa](https://github.com/PWieland/DDB/assets/65927363/272459f1-a2bf-4d2a-9d27-d979934ba07c)
 
