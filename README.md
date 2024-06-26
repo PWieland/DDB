@@ -2,6 +2,7 @@
 
 This is a collection of diamond buffers implemented with discrete components. DDB thus stands for "Discrete Diamond Buffer".
 The designs shared here are mostly dimensioned for driving headphones of average efficiency from bipolar 10V to 15V rails.
+Of course they can also be used in various other analog applications, for example test and measurement.
 
 ## Discrete Diamond Buffers
 
@@ -62,6 +63,8 @@ The diode can easily be substituted by a resistor, avoiding the somewhat exotic 
 
 ## Performance
 
+### Distortion
+
 I designed these buffers to be used within the feedback loop of OpAmps to drive headphones with vanishingly low distortion levels.
 For basic testing of this configuration, I designed a dual channel test board with the OpAmps configured as differential amplifiers.
 To achieve the best possible performance, as little as possible of the OpAmp's loop gain may be "wasted" throughout the audio band.
@@ -75,6 +78,10 @@ The actual load resistance is slightly lower than 50Ω, due to the fairly low im
 Under these conditions, the output stage is operating at the upper end of its Class A region.
 
 ![newhpa](https://github.com/PWieland/DDB/assets/65927363/272459f1-a2bf-4d2a-9d27-d979934ba07c)
+
+### Noise
+
+### Bandwidth
 
 
 
