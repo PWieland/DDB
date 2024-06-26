@@ -40,7 +40,7 @@ https://pearl-hifi.com/06_Lit_Archive/14_Books_Tech_Papers/Jung_W/Realizing_Good
 <img width="1217" alt="image" src="https://github.com/PWieland/DDB/assets/65927363/93e6639d-ad2f-421e-8aae-9243687e30ba">
 
 I chose to use identical transistors (e.g. PXT2907A/PXT2222A) for driver and output stage and employ three parallel output pairs.
-Originally I chose to run all at the same current to establish similar operating points for better thermal stability and offset.
+Originally I chose to run all at the same current to establish similar operating points for better thermal stability and lower offset.
 The high bias current in the driver stages however is somewhat wasteful and results in a buffer that is toastier than I prefer.
 As far as the hardware implementation goes, I used a 4-Layer PCB with partly exposed VCC and VEE copper pours on the bottom layer.
 
