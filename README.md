@@ -70,7 +70,9 @@ Therefore, it is recommended to apply two-pole-compensation schemes instead of s
 ![IMG_1713](https://github.com/PWieland/DDB/assets/65927363/e38ad0f8-9381-40a7-a4e8-a1718934670b)
 
 The "classic" diamond buffer inspired by Walt Jung combined with LME49720, driving 1kHz@2Vrms into 50Ω.
-The buffer was running fairly hot at about 10mA per transistor on +/- 12V rails.
+The buffer was running fairly hot at about 10mA per transistor on +/- 12V rails. 
+The actual load resistance is lower than 50Ω, due to the fairly low impedance of the Cosmos ADC used for measurement.
+Under these conditions, the output stage is operating at the upper end of its Class A region.
 
 ![newhpa](https://github.com/PWieland/DDB/assets/65927363/272459f1-a2bf-4d2a-9d27-d979934ba07c)
 
