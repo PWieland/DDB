@@ -106,11 +106,13 @@ Therefore, it is recommended to apply two-pole-compensation schemes instead of s
 
 ![IMG_1713](https://github.com/PWieland/DDB/assets/65927363/e38ad0f8-9381-40a7-a4e8-a1718934670b)
 
-The "classic" diamond buffer inspired by Walt Jung combined with LME49720, driving 1kHz@2Vrms into 50Ω.
+The "classic" diamond buffer inspired by Walt Jung combined with LME49720, driving a 50Ω load to 2Vrms at 1kHz.
 The buffer was running fairly hot at about 10mA per transistor on +/- 12V rails. 
 The actual load resistance is slightly lower than 50Ω, due to the fairly low impedance of the Cosmos ADC used for measurement.
 Under these conditions, the output stage is operating at the upper end of its Class A region and the harmonic distortion remains well below -120dBV.
 The THD+N is dominated by mains noise coming from the power supply, but is still well below the threshold of human hearing.
+Paired with a better power supply and an even better OpAmp like OPA161x or AD797, state of the art performance can be achieved.
+
 
 ![newhpa](https://github.com/PWieland/DDB/assets/65927363/272459f1-a2bf-4d2a-9d27-d979934ba07c)
 
