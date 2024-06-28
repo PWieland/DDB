@@ -29,6 +29,22 @@ Doing one at a time is challenging at the very least, doing both at the same tim
 In contrast to the vast majority of discrete diamond buffers out there, I exclusively use modern SMD components.
 They are cheaper and smaller but assembling these PCBs by hand takes some experience. 
 
+### Component Choices
+
+I try to select packages that are solderable by hand for the average maker with somewhat steady hands.
+Resistors in the signal path are mostly Vishay Beyschlag MELFs, very high quality resistors made in Germany.
+They are very linear, very low noise and offer very good pulse load behavior. 
+
+Capacitors are either X5R/X7R or C0G/NP0 ceramics, depending on capacitance.
+
+Transistors are SOT-23-3 for small signal types and SOT-89-3 for medium power output transistors.
+Most of the pinouts are compatible and there are plenty of transistor types to choose from.
+My prototypes were mostly assembled using the following Toshiba transistors (mostly personal preference):
+
+SOT-23: 2SA1162/2SC2712, 2SA1163/2SC2713
+
+SOT-89: 2SA1201/2SC2881
+
 ## The Buffers
 
 I started with two basic designs. Both were designed to be used with 25x25mm heatsinks glued to the back.
