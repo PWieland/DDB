@@ -56,18 +56,28 @@ Fixing stability issues will often cost bandwidth, which is especially critical 
 <img width="950" alt="image" src="https://github.com/PWieland/DDB/assets/65927363/44faf238-c882-4aa0-ba9c-67795553b761">
 
 This implementation again features circuitry (D1/D2 and Q5/Q6) to protect from overload conditions, similar to the classic design.
+The shrunken versions replace the discrete JFET CCSs with integrated current regulator diodes (CRDs), which have to be matched due to poor tolerances.
+The smallest version also uses LEDs for overcurrent protection instead of Q5/Q6, just like Walt Jung's design.
 
 In my limited experience the more sophisticated variants tend to fall short of their promises, both in simulation and reality.
 
 ### PCB Pictures
 
+Walt Jung inspired version on the top, bootstrap version on the bottom:
 ![IMG_0166](https://github.com/PWieland/DDB/assets/65927363/5900f13f-ad8e-4c53-a13a-c2e7290ddf6c)
 
 A more compact version of the bootstrapped buffer, using a 20x20x10mm heatsink.
 It also features CRDs (Current Regulator Diodes) instead of discrete JFET current sources.
 The diode can easily be substituted by a resistor, avoiding the somewhat exotic CRD.
-
 ![IMG_1712](https://github.com/PWieland/DDB/assets/65927363/e94fc26d-e403-4591-9036-c352ff144fc7)
+
+For no good reason I decided to take the miniaturisation even further, shrinking the PCB down to 20x15mm with matching heatsink.
+If this isn't the most compact discrete diamond buffer you have seen, please let me know.
+![IMG_0171](https://github.com/PWieland/DDB/assets/65927363/adcf8ff4-9a1f-420e-9d8d-6c8243a440ae)
+
+All three versions of the bootstrapped buffer for size comparison (all 2-Layer PCBs):
+![IMG_1957](https://github.com/PWieland/DDB/assets/65927363/01bcdeab-b8d9-4fd8-b5d7-f13e2ef68a82)
+
 
 ## Performance
 
